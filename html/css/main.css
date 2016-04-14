@@ -133,18 +133,19 @@ nav.social li.twitter a {
 }
 .hero .content {
 	width: 1100px;
-	height: auto;
+	height: 670px;
 	margin: 0 auto;
 	background-image: url('../img/transparent-kim.png');
 	background-repeat: no-repeat;
-	background-position: top center;
-	background-size: cover;
+	background-position: bottom left;
 	z-index: 99999999;
 	
 }
 .hero h2 {
 	text-transform: uppercase;
 	text-align: center;
+	letter-spacing: 1px;
+	margin-bottom: 45px;
 }
 .hero form {
 	background-color: rgba(255, 255, 255, 0.85);
@@ -192,8 +193,17 @@ input::-webkit-input-placeholder, input::-moz-placeholder, input:-ms-input-place
 	color: #a1a1a1;
 }
 
-
-
+/* Other */
+.star {
+	display: inline-block;
+	width: 23px;
+	height: 23px;
+	background-image: url('../img/star-icon.png');
+	margin-right: 22px;
+}
+.star.right {
+	margin: 0 0 0 22px;
+}
 
 
 /* ==========================================================================
