@@ -40,21 +40,54 @@ ul, ol, li {
 	padding: 0;
 	list-style: none;
 }
+#admin-menu-wrapper {
+	letter-spacing: 0!important;
+}
 
 /*    TYPOGRAPHY
 /*--------------------------------------*/
 
+@font-face {
+    font-family: 'Klinic';
+    src: url('fonts/klinicslabboldit-webfont.eot');
+    src: url('fonts/klinicslabboldit-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/klinicslabboldit-webfont.woff2') format('woff2'),
+         url('fonts/klinicslabboldit-webfont.woff') format('woff'),
+         url('fonts/klinicslabboldit-webfont.ttf') format('truetype'),
+         url('fonts/klinicslabboldit-webfont.svg#klinic_slabbold_italic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Klinic';
+    src: url('klinicslabmediumit-webfont.eot');
+    src: url('klinicslabmediumit-webfont.eot?#iefix') format('embedded-opentype'),
+         url('klinicslabmediumit-webfont.woff2') format('woff2'),
+         url('klinicslabmediumit-webfont.woff') format('woff'),
+         url('klinicslabmediumit-webfont.ttf') format('truetype'),
+         url('klinicslabmediumit-webfont.svg#klinic_slabmedium_italic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+
+}
 html {
     font: 22px/26px "proxima-nova", Helvetica Neue, Helvetica, Arial, sans-serif;
     color: #242f33;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
 }
 h1, h2, h3, h4, h5, h6 {
 	color: #134369;
 	margin-top: 0;
+	font-weight: 600;
 }
 article h1, article h2, article h3, article h4, article h5, article h6 {
 	margin: 35px 0;
+}
+.not-front article h2 {
+	font-family: Klinic;
+	font-weight: 300;
+	font-style: italic;
+	color: #08a1e1;
 }
 h1 {
 	font-size: 1.8em /*40px*/;
@@ -82,7 +115,7 @@ a.btn {
 	display: block;
 	color: white;
 	text-transform: uppercase;
-	font-weight: bold;
+	font-weight: 500;
 	text-align: center;
 	margin: 0 auto;
 	width: 315px;
@@ -92,10 +125,15 @@ a.btn {
 /*    MAIN CONTENT
 /*--------------------------------------*/
 
-/* Container */
+/* Containers */
 .content {
 	width: 1100px;
 	margin: 0 auto;
+}
+.hero, .front .support, .front section.twitter, .front .photo-gallery, .front .about, section.donate, .front .support {
+	float: left;
+	clear: both;
+	width: 100%;
 }
 
 /* Header */
@@ -119,7 +157,6 @@ header nav {
 	clear: right;
 }
 nav li {
-	font-size: .8em;
 	display: inline-block;
 }
 nav.main li a {
@@ -127,11 +164,14 @@ nav.main li a {
 	text-decoration: none;
 	padding: 5px 20px;
 	text-transform: uppercase;
+	font-weight: 400;
+	font-size: .8em;
 }
-header nav.main li.last a {
+header nav.main li a.donate {
 	color: white;
 	background-color: #ab3c39;
 	padding: 13px 45px;
+	font-weight: 500;
 }
 header nav.social {
 	margin-bottom: 20px;
@@ -143,8 +183,6 @@ nav.social li.twitter a {
 
 /* Home - Hero */
 .hero {
-	width: 100%;
-	clear: both;
 	background-image: url('../img/landscape.jpg');
 	background-repeat: no-repeat;
 	background-position: top center;
@@ -182,8 +220,9 @@ form li {
 }
 form input[type="text"] {
 	border: 4px solid #ccc;
-	font-weight: bold;
+	font-weight: 500;
 	font-size: .77em;
+	letter-spacing: 1.5px;
 	text-transform: uppercase;
 	padding: 20px;
 	margin: 0 0 20px 0;
@@ -194,9 +233,11 @@ form input[type="button"] {
 	text-align: center;
 	background-color: #00aef3;
 	color: white;
-	font-weight: bold;
+	font-weight: 500;
+	letter-spacing: 1.5px;
 	border: none;
 	text-transform: uppercase;
+	font-size: .9em;
 }
 /* End */
 .hero form input#email {
@@ -237,7 +278,7 @@ input::-webkit-input-placeholder, input::-moz-placeholder, input:-ms-input-place
 }
 
 /* Twitter */
-.home section.twitter {
+.front section.twitter {
 	background: url('../img/twitter-lg-bg.jpg') no-repeat center top;
 	background-size: cover;
 	padding: 100px 0 80px 0;
@@ -279,15 +320,16 @@ section.twitter .controls .arrow-right {
 }
 
 /* Support */
-.home .support {
+.front .support {
 	text-align: center;
 	margin: 75px 0 70px 0;
 }
-.home .support p {
+.front .support p {
 	font-size: 1.1em;
 }
 .support ul {
 	margin: 35px 0 40px 0;
+	text-align: center;
 }
 .support li {
 	display: inline-block;
@@ -317,11 +359,23 @@ section.twitter .controls .arrow-right {
 	line-height: 1.4em;
 	text-align: center;
 	color: white;
-	font-weight: bold;
+	font-weight: 500;
 	padding: 0;
 	position: relative;
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	transition: all 0.54s ease-in-out;
 }
-.photo-gallery li p {
+.photo-gallery li .overlay {
+	width: 100%;
+	height: 100%;
+	transition: all 0.54s ease-in-out;
+}
+.photo-gallery li .overlay:hover {
+	background: rgba(60, 102, 133, 0.8);
+}
+.photo-gallery li .field-type-text {
 	width: 450px;
 	height: 150px;
 	padding: 20px;
@@ -330,9 +384,9 @@ section.twitter .controls .arrow-right {
 	left: 50%;
 	margin: -95px 0 0 -245px;
 	opacity: 0;
-	transition: all 0.24s ease-in-out;
+	transition: all 0.54s ease-in-out;
 }
-.photo-gallery li:hover p {
+.photo-gallery li:hover .field-type-text {
 	opacity: 1;
 }
 .photo-gallery .left li {
@@ -345,29 +399,26 @@ section.twitter .controls .arrow-right {
 }
 
 /* Donate */
-.donate {
-	width: 100%;
+section.donate {
 	background-color: #00aef3;
 	padding: 37px 0 46px 0;
-	float: left;
-	clear: both;
 }
-.donate p {
+section.donate p {
 	color: white;
 	font-size: .9em;
 	width: 550px;
 	float: left;
 }
-.donate h2 {
+section.donate h2 {
 	width: 550px;
 	margin-bottom: 0;
 }
-.donate .content ol {
+section.donate .content ol {
 	float: right;
 	clear: right;
 	width: 510px!important;
 }
-.donate li {
+section.donate li {
 	background-color: #f14444;
 	border: 2px solid #f43d3d;
 	width: 95px;
@@ -379,14 +430,15 @@ section.twitter .controls .arrow-right {
 	display: inline-block;
 	transition: all 0.2s ease;
 }
-.donate li:hover {
+section.donate li:hover {
 	background-color: #f65151;
 	border: 2px solid #f14444;
 	transform: scale(1.07,1.07);
 }
-.donate a {
+section.donate a {
 	font-size: 1.8em;
 	color: white;
+	font-family: Klinic;
 	font-weight: bold;
 	font-style: italic;
 }
@@ -397,20 +449,18 @@ section.twitter .controls .arrow-right {
 	width: 100%;
 	text-align: center;
 	padding: 113px 0 95px 0;
-	font-size: .72em;
 }
 footer .logo {
 	max-width: 118px;
 	height: auto;
 }
-footer li.give a {
+footer li a.donate {
 	color: #ad3b36;
-}
-footer nav li {
-	display: inline-block;
 }
 footer nav.main li a {
 	padding: 5px 15px;
+	font-weight: 400;
+	font-size: .7em;
 }
 footer nav, footer nav ul {
 	display: inline-block;
@@ -418,19 +468,21 @@ footer nav, footer nav ul {
 footer nav {
 	margin: 30px 0 43px 0;
 }
-footer .paid-for {
+footer p {
 	color: white;
 	border: 2px solid white;
-	width: 690px;
+	width: 700px;
 	margin: 0 auto;
 	padding: 10px 0;
+	text-transform: uppercase;
+	font-size: .7em;
 }
 
 /* Interior */
-.interior .hero {
+.not-front .hero {
 	height: 433px;
 }
-.interior article {
+.not-front article {
 	width: 700px;
 	padding: 60px 0;
 	float: left;
@@ -440,30 +492,43 @@ footer .paid-for {
 	float: right;
 	clear: right;
 	width: 380px;
+	margin-top: 0;
+}
+.with-hero.sidebar {
 	margin-top: -90px;
 }
 
+/* Interior - Issues */
+.item-list .node-issue {
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 10px;
+}
+
 /* Interior - Sidebar */
+.sidebar h2 {
+	font-size: 1.09em;
+}
+
+/* Interior - Form */
 .sidebar form {
 	background: url('../img/transparent.png') repeat;
 	padding: 25px;
 	margin-bottom: 20px;
 }
-.sidebar form h2 {
-	font-size: 1.3em;
-}
 .sidebar form p {
-	font-size: .88em;
+	font-size: .7em;
+	line-height: 1.4em;
 }
 .sidebar form input#email {
 	width: 308px;
+	margin: 0 0 8px 0;
 }
 .sidebar form input#zip {
 	width: 100px;
 	float: left;
 }
 .sidebar form input[type="text"] {
-	font-size: .77em;
+	font-size: .72em;
 	padding: 8px;
 	margin: 0 0 20px 0;
 	border: 3px solid #ccc;
@@ -474,7 +539,7 @@ footer .paid-for {
 	padding: 11px 0;
 	text-align: center;
 	background-color: #7ac144;
-	font-size: .77em;
+	font-size: .72em;
 	float: right;
 }
 
@@ -490,6 +555,7 @@ footer .paid-for {
 .sidebar .twitter h2 {
 	font-size: 1.1em;
 	margin-top: 40px;
+	font-weight: 400;
 }
 .sidebar .twitter p {
 	font-size: .77em;
@@ -501,7 +567,7 @@ footer .paid-for {
 }
 .sidebar .twitter a.btn {
 	padding: 10px 0;
-	font-size: .77em;
+	font-size: .72em;
 	width: 200px;
 }
 
@@ -512,19 +578,16 @@ footer .paid-for {
 	margin-bottom: 20px;
 }
 .sidebar .support p {
-	font-size: .77em;
+	font-size: .72em;
 	line-height: 1.4em;
 }
 .sidebar .support li {
 	display: inline-block;
 	margin: 5px 2px;
 }
-.sidebar .support h2 {
-	font-size: 1.3em;
-}
 .sidebar .support .btn {
 	padding: 10px 0;
-	font-size: .77em;
+	font-size: .72em;
 	width: 200px;
 }
 

@@ -1,5 +1,5 @@
-name = Kim Meyers Theme
-description = Custom theme for Kim Meyers.
+name = Kim Myers Theme
+description = Custom theme for Kim Myers.
 version = 1.0
 core = 7.x
 engine = phptemplate
@@ -17,7 +17,6 @@ regions[header] = Header
 regions[highlighted] = Highlighted
 regions[help] = Help
 regions[content] = Content
-regions[slogan] = Slogan
 regions[sidebar_first] = Sidebar First
 regions[sidebar_second] = Sidebar Second
 regions[footer] = Footer

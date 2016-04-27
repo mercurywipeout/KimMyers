@@ -1,6 +1,6 @@
 <?php
 
-function lisablunt_preprocess_page(&$vars) {
+function kimmyers_preprocess_page(&$vars) {
 	if (isset($vars['node']->field_feature_image) && !empty($vars['node']->field_feature_image['und'][0]['filename'])) {
 	  $filename = $vars['node']->field_feature_image['und'][0]['uri'];
 	    $vars['hero_image'] = file_create_url($filename);
@@ -9,7 +9,7 @@ function lisablunt_preprocess_page(&$vars) {
 	}
 }
 
-function lisablunt_css_alter(&$css) {
+function kimmyers_css_alter(&$css) {
 	$exclude = array(
 		'misc/vertical-tabs.css' => FALSE,
 		'modules/aggregator/aggregator.css' => FALSE,

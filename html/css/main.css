@@ -92,10 +92,15 @@ a.btn {
 /*    MAIN CONTENT
 /*--------------------------------------*/
 
-/* Container */
+/* Containers */
 .content {
 	width: 1100px;
 	margin: 0 auto;
+}
+.hero, .home .support, .home section.twitter, .home .photo-gallery, .home .about, .donate, .home .support {
+	float: left;
+	clear: both;
+	width: 100%;
 }
 
 /* Header */
@@ -143,8 +148,6 @@ nav.social li.twitter a {
 
 /* Home - Hero */
 .hero {
-	width: 100%;
-	clear: both;
 	background-image: url('../img/landscape.jpg');
 	background-repeat: no-repeat;
 	background-position: top center;
@@ -346,11 +349,8 @@ section.twitter .controls .arrow-right {
 
 /* Donate */
 .donate {
-	width: 100%;
 	background-color: #00aef3;
 	padding: 37px 0 46px 0;
-	float: left;
-	clear: both;
 }
 .donate p {
 	color: white;
