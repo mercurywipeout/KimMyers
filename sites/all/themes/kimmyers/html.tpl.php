@@ -11,6 +11,7 @@
 	<link rel="icon" type="image/png" href="<?php print path_to_theme(); ?>/favicon.png">
 	<?php print $styles; ?>
 	<?php print $scripts; ?>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
 	<?php print $page_top; ?>

@@ -71,7 +71,7 @@ ul, ol, li {
 
 }
 html {
-    font: 22px/26px "proxima-nova", Helvetica Neue, Helvetica, Arial, sans-serif;
+    font: 22px/26px 'proxima-nova', Helvetica Neue, Helvetica, Arial, sans-serif;
     color: #242f33;
     letter-spacing: 1.5px;
 }
@@ -83,7 +83,7 @@ h1, h2, h3, h4, h5, h6 {
 article h1, article h2, article h3, article h4, article h5, article h6 {
 	margin: 35px 0;
 }
-.not-front article h2 {
+.not-front.page-node article h2 {
 	font-family: Klinic;
 	font-weight: 300;
 	font-style: italic;
@@ -120,6 +120,9 @@ a.btn {
 	margin: 0 auto;
 	width: 315px;
 	padding: 20px 0;
+}
+h2 a {
+	color: #134369;
 }
 
 /*    MAIN CONTENT
@@ -295,6 +298,9 @@ section.twitter .tweet {
 	line-height: 1.4em;
 	width: 820px;
 	margin: 0 auto;
+}
+.twitter h2 a {
+	color: #00aef3;
 }
 section.twitter p {
 	margin: 0;
@@ -498,10 +504,54 @@ footer p {
 	margin-top: -90px;
 }
 
-/* Interior - Issues */
-.item-list .node-issue {
-	border-bottom: 1px solid #ccc;
-	padding-bottom: 10px;
+/* Interior - Views */
+.view .element-invisible {
+	display: none;
+}
+.page-news article, .page-issues article {
+	width: 930px;
+}
+.news-list li, .issues-list li {
+	border-bottom: 3px solid #ebebeb;
+	padding-bottom: 40px;
+	margin-bottom: 50px;
+}
+.item-list p {
+	font-size: .9em;
+	display: inline;
+}
+.item-list .read-more a {
+	font-size: .81em;
+	text-transform: uppercase;
+	font-weight: 500;
+	font: soleil;
+}
+.item-list .date {
+	font-size: .6em;
+	font-weight: bold;
+	color: #969696;
+	display: inline-block;
+	padding-left: 28px;
+	margin-top: 30px;
+	background: url('../img/calendar-icon.png') no-repeat left center;
+	font: soleil;
+	letter-spacing: 1px;
+}
+.pager {
+	text-align: center;
+	font: soleil;
+	padding: 30px 0 40px 0;
+}
+.pager li {
+	display: inline-block;
+	padding: 0 14px;
+	font-size: .86em;
+}
+.pager li a {
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #0e305b;
+	letter-spacing: 0;
 }
 
 /* Interior - Sidebar */

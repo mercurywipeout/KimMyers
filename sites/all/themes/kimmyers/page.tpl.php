@@ -12,11 +12,17 @@
 				<h1><?php print $title; ?></h1>
                	<?php print render($page['content']); ?>
        		</article>
+       		<?php 
+       			$views_page = views_get_page_view();
+       			if (is_object($views_page)) { }
+       			else {
+       		?>
        		<?php if (($hero_image)) { ?>
        		<div class="with-hero sidebar clearfix">
        		<?php } else { ?>
        		<div class="sidebar clearfix">
        		<?php } ?>
+       		
        			<form class="clearfix" method="post" action="">
        				<h2>Join Kim</h2>
        				<p>Sign up for email alerts and stay updated on the latest campaign news.</p>
@@ -57,6 +63,7 @@
        				<a href="#" class="btn">Join Kim</a>
        			</div>
        		</div>
+       		<?php } ?>
         </section>
         
         <section class="donate clearfix">
