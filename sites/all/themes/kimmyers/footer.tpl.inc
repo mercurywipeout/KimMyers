@@ -3,6 +3,7 @@
         <h3>
         	<a href="/">
         	<img src="/sites/all/themes/kimmyers/img/logo.png" alt="Kim Myers for Congress" class="logo" />
+        	<img src="/sites/all/themes/kimmyers/img/mobile-footer-logo.png" alt="Kim Myers for Congress" class="mobile-logo" />
         	<span class="visuallyhidden">Kim Myers for Congress</span>
         	</a>
         </h3>

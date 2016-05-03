@@ -66,6 +66,35 @@
        		<?php } ?>
         </section>
         
+        <section class="sidebar">
+        	<div class="twitter">
+        		<img src="/sites/all/themes/kimmyers/img/twitter-lg-icon.png" alt="Twitter" />
+        		<h2><a href="http://twitter.com/KimForCongress" class="handle">@KimForCongress</a></h2>
+        		<div class="tweet">
+        			<p>Upstate NY has given so much to me & my family. I want to give back by putting NY families & jobs first. Learn more <a href="http://www.myersforcongress.com">http://www.myersforcongress.com</a>.</p>
+        			<span class="date">One Day Ago</span>
+        		</div>
+        		<a href="http://twitter.com/KimForCongress" class="btn">Follow Kim</a>
+        	</div>
+        	<div class="support">
+        		<h2>Show Your Support</h2>
+        		<p>Add your name below to the list of those supporting Kim for Congress!</p>
+        		<ul>
+        			<li><a href="#"><img src="http://placehold.it/55x55" alt="" /></a></li>
+        			<li><a href="#"><img src="http://placehold.it/55x55" alt="" /></a></li>
+        			<li><a href="#"><img src="http://placehold.it/55x55" alt="" /></a></li>
+        			<li><a href="#"><img src="http://placehold.it/55x55" alt="" /></a></li>
+        			<li><a href="#"><img src="http://placehold.it/55x55" alt="" /></a></li>
+        			<li><a href="#"><img src="http://placehold.it/55x55" alt="" /></a></li>
+        			<li><a href="#"><img src="http://placehold.it/55x55" alt="" /></a></li>
+        			<li><a href="#"><img src="http://placehold.it/55x55" alt="" /></a></li>
+        			<li><a href="#"><img src="http://placehold.it/55x55" alt="" /></a></li>
+        			<li><a href="#"><img src="http://placehold.it/55x55" alt="" /></a></li>
+        		</ul>
+        		<a href="#" class="btn">Join Kim</a>
+        	</div>
+        </section>
+        
         <section class="donate clearfix">
         	<div class="content">
                 <h2>Donate Now</h2>
